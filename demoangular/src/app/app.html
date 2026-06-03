@@ -1,0 +1,21 @@
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Notas</th>
+    <th>Cursos</th>
+  </tr>
+
+  @for (usuario of usuarios; track usuario.id) {
+    <tr>
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.correo }}</td>
+      <td>{{ usuario.notas.join(', ') }}</td>
+      <td>{{ usuario.cursos.join(', ') }}</td>
+    </tr>
+  }
+</table>
+  
