@@ -1,0 +1,32 @@
+<section class="tabla-card">
+  <header class="tabla-header">
+    <p class="tabla-kicker">Vista principal</p>
+    <h1>Tabla de usuarios</h1>
+    <p class="tabla-descripcion">Esta es la tabla que ya habías creado, ahora mostrada como una ruta más dentro de la aplicación.</p>
+  </header>
+
+  <div class="tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Notas</th>
+          <th>Cursos</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (usuario of usuarios; track usuario.id) {
+          <tr>
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.correo }}</td>
+            <td>{{ usuario.notas.join(', ') }}</td>
+            <td>{{ usuario.cursos.join(', ') }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

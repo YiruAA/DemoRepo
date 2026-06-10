@@ -1,107 +1,15 @@
-/* Fondo general */
 :host {
   display: block;
   min-height: 100vh;
-  padding: 40px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 24%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: #e5e7eb;
 }
 
-/* Título */
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-h1 span {
-  color: #38bdf8;
-}
-
-/* Contenedor */
-.contenedor {
+.contenido-principal {
   max-width: 1100px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-/* Tabla */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-/* Cabecera */
-th {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  color: white;
-  padding: 18px;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
-
-/* Celdas */
-td {
-  padding: 18px;
-  color: #e2e8f0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Filas */
-tbody tr {
-  transition: all 0.3s ease;
-}
-
-tr:hover {
-  background: rgba(59, 130, 246, 0.15);
-  transform: scale(1.01);
-}
-
-/* Filas alternadas */
-tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.03);
-}
-
-/* Primera columna (ID) */
-td:first-child {
-  font-weight: bold;
-  color: #38bdf8;
-}
-
-/* Correo */
-td:nth-child(3) {
-  color: #22d3ee;
-}
-
-/* Notas */
-td:last-child {
-  font-weight: 600;
-  color: #facc15;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  table {
-    font-size: 14px;
-  }
-
-  th,
-  td {
-    padding: 12px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
 }
