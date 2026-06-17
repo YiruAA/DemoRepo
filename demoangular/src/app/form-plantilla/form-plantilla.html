@@ -1,0 +1,37 @@
+<form #miForm="ngForm" (ngSubmit)="onEnviar(miForm)" class="modern-form">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" ngModel required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" ngModel required>
+  </div>
+  <div>
+    <label for="edad">Edad</label>
+    <input id="edad" name="edad" ngModel required type="number" min="18" #edad="ngModel">
+  </div>
+  <div *ngIf="edad && edad.invalid && edad.touched">
+    <div *ngIf="edad.errors?.['required']">Edad es obligatorio</div>
+    <div *ngIf="edad.errors?.['min']">Minimo no válido</div>
+  </div>
+
+  <div>
+    <label for="pais">Selecciona el país</label>
+    <select id="pais" name="pais" ngModel required>
+      <option value="">Seleccione un país</option>
+      <option value="mx">México</option>
+      <option value="co">Colombia</option>
+      <option value="pe">Perú</option>
+    </select>
+  </div>
+  <div>
+    <label for="comentarios">Comentarios</label>
+    <textarea id="comentarios" name="comentarios" ngModel required></textarea>
+  </div>
+
+  <button type="submit" [disabled]="miForm.invalid">
+    Enviar
+  </button>
+</form>

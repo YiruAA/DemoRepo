@@ -1,0 +1,36 @@
+<form [formGroup]="miForm" (ngSubmit)="onEnviar()">
+
+  <div>
+    <label for="nombre">Nombre</label>
+    <input id="nombre" formControlName="nombre">
+  </div>
+
+<div>
+ <label for="email">Email</label><input id="email" formControlName="email">
+ <div *ngIf="miForm.get('email')?.touched && miForm.get('email')?.invalid">
+     <small *ngIf="miForm.get('email')?.errors?.['required']">Email es obligatorio</small>
+     <small *ngIf="miForm.get('email')?.errors?.['email']">Email no es válido</small>
+ </div>
+ </div>
+
+
+
+  <div>
+    <label for="pais">Selecciona el país</label>
+    <select id="pais" formControlName="pais">
+      <option value="">Seleccione un país</option>
+      <option value="mx">México</option>
+      <option value="co">Colombia</option>
+      <option value="pe">Perú</option>
+    </select>
+  </div>
+  <div>
+    <label for="comentarios">Comentarios</label>
+    <textarea id="comentarios" formControlName="comentarios"></textarea>
+  </div>
+
+  <button type="submit" [disabled]="miForm.invalid">
+    Enviar
+  </button>
+
+</form>

@@ -4,8 +4,21 @@ import { NE } from './n-e/n-e';
 import { Detalle2 } from './detalle2/detalle2';
 import { Detalle3 } from './detalle3/detalle3';
 import { Tabla } from './tabla/tabla';
+import { FormPlantilla } from './form-plantilla/form-plantilla';
+import { FormReactivo } from './form-reactive/form-reactive';
 
 export const routes: Routes = [ 
+
+  {
+    path: 'form-plantilla',
+    component: FormPlantilla,
+    title: 'Formulario de plantilla',
+  },
+  {
+    path: 'form-reactive',
+    component: FormReactivo,
+    title: 'Formulario reactivo',
+  },
 
   {
     path: 'n-e',
