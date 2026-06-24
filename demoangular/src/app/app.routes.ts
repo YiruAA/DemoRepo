@@ -6,9 +6,14 @@ import { Detalle3 } from './detalle3/detalle3';
 import { Tabla } from './tabla/tabla';
 import { FormPlantilla } from './form-plantilla/form-plantilla';
 import { FormReactivo } from './form-reactive/form-reactive';
+import { FormUsuario } from './form-usuario/form-usuario';
 
 export const routes: Routes = [ 
-
+  {
+    path: 'form-usuario',
+    component: FormUsuario,
+    title: 'Formulario de usuario',
+  },
   {
     path: 'form-plantilla',
     component: FormPlantilla,
